@@ -1,8 +1,59 @@
-## Facebook + Chrome Extension
+# Chrome Extension TypeScript Starter
 
-You should create a README.md file that explains the plugin you built and acts as a "manual" for it. This README should include the app's name, who built it (your names), a brief description of its purpose (for context), how to install it, and basic instructions on how to use it. Include this README in your code repo.
+Chrome Extension, TypeScript and Visual Studio Code
 
-The Goal:
-1) Modify the Facebook home page
-2) Have history information for FB usage
-3) nice looking popup and interface
+## Prerequisites
+
+* [node + npm](https://nodejs.org/) (Current Version)
+
+## Option
+
+* [Visual Studio Code](https://code.visualstudio.com/)
+
+## Includes the following
+
+* TypeScript
+* Webpack
+* Moment.js
+* jQuery
+* Example Code
+    * Chrome Storage
+    * Options Version 2
+    * content script
+    * count up badge number
+    * background
+
+## Project Structure
+
+* src: TypeScript source files
+* dist: Chrome Extension directory
+* dist/js: Generated JavaScript files
+
+## Setup
+
+```
+npm install
+```
+
+## Import as Visual Studio Code project
+
+...
+
+## Build by watch mode
+
+### terminal
+
+```
+npm run build
+```
+
+### Visual Studio Code
+
+Run watch mode.
+
+type `Ctrl + Shift + B`
+
+## Load extension to chrome
+
+Load `dist` directory
+
