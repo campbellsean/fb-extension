@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // Elements in here are removed from the DOM.
 // These selectors should also be added to `eradicate.css`
 // to ensure they're hidden before the script loads.
@@ -19,10 +17,9 @@ const removeChildren = (node) => {
         node.removeChild(node.firstChild);
     }
 };
-function removeFeed() {
-    document.querySelectorAll(elementsToRemove).forEach(removeNode);
-    document.querySelectorAll(elementsToEmpty).forEach(removeChildren);
-}
-exports.default = removeFeed;
+// export default function removeFeed() {
+//     document.querySelectorAll(elementsToRemove).forEach(removeNode);
+//     document.querySelectorAll(elementsToEmpty).forEach(removeChildren);
+// }
 document.querySelectorAll(elementsToRemove).forEach(removeNode);
 document.querySelectorAll(elementsToEmpty).forEach(removeChildren);
