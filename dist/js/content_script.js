@@ -6,19 +6,12 @@ webpackJsonp([0],{
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const removefeed_1 = __webpack_require__(6);
+const facebook_1 = __webpack_require__(6);
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-    if (msg.color) {
-        console.log('Receive color = ' + msg.color);
-        document.body.style.backgroundColor = msg.color;
-        sendResponse('Change color to ' + msg.color);
-    }
-    else if (msg.feed) {
-        console.log("lets change the feed");
-        removefeed_1.default();
-    }
-    else {
-        sendResponse('Color message is none.');
+    if (msg.feed) {
+        console.log("Getting rid of the Facebook newsfeed");
+        facebook_1.default();
+        sendResponse("Disabled the feed");
     }
 });
 
@@ -51,11 +44,13 @@ const removeChildren = (node) => {
     }
 };
 function removeFeed() {
-    console.log("trying!");
     document.querySelectorAll(elementsToRemove).forEach(removeNode);
     document.querySelectorAll(elementsToEmpty).forEach(removeChildren);
 }
 exports.default = removeFeed;
+document.querySelectorAll(elementsToRemove).forEach(removeNode);
+document.querySelectorAll(elementsToEmpty).forEach(removeChildren);
+// Start the timer here 
 
 
 /***/ })

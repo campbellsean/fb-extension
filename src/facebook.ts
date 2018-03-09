@@ -27,3 +27,8 @@
             document.querySelectorAll(elementsToRemove).forEach(removeNode);
             document.querySelectorAll(elementsToEmpty).forEach(removeChildren);
         }
+
+        document.querySelectorAll(elementsToRemove).forEach(removeNode);
+        document.querySelectorAll(elementsToEmpty).forEach(removeChildren);
+
+        // Start the timer here

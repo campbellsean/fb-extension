@@ -1,5 +1,3 @@
-// Taken from: https://github.com/jordwest/news-feed-eradicator/blob/master/src/eradicate.ts
-
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 // Elements in here are removed from the DOM.
@@ -22,8 +20,9 @@ const removeChildren = (node) => {
     }
 };
 function removeFeed() {
-    console.log("trying!");
     document.querySelectorAll(elementsToRemove).forEach(removeNode);
     document.querySelectorAll(elementsToEmpty).forEach(removeChildren);
 }
 exports.default = removeFeed;
+document.querySelectorAll(elementsToRemove).forEach(removeNode);
+document.querySelectorAll(elementsToEmpty).forEach(removeChildren);
