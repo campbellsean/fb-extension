@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Chrome Extension TypeScript Starter",
-  "description": "Chrome Extension, TypeScript, Visual Studio Code",
+  "name": "Facebook Customization Tool",
+  "description": "Understand your browsing history and reduce the amount of time spent on Facebook.",
   "version": "1.0",
 
   "options_ui": {
@@ -19,6 +19,18 @@
       {
           "matches": ["<all_urls>"],
           "js": ["js/vendor.js", "js/content_script.js"]
+      },
+      {
+        "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*","http://web.facebook.com/*","https://web.facebook.com/*"],
+        "js": ["js/removefeed.js"],
+        "css": ["style.css"],
+        "run_at": "document_start"
+      },
+      {
+        "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*","http://web.facebook.com/*","https://web.facebook.com/*"],
+        "js": ["js/removefeed.js"],
+        "css": ["style.css"],
+        "run_at": "document_idle"
       }
   ],
 
@@ -28,6 +40,10 @@
 
   "permissions": [
     "storage",
-    "<all_urls>"
+    "<all_urls>",
+    "http://www.facebook.com/*",
+		"https://www.facebook.com/*",
+		"http://web.facebook.com/*",
+		"https://web.facebook.com/*"
   ]
 }
