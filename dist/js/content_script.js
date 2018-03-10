@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 5:
+/***/ 3:
 /***/ (function(module, exports) {
 
 // chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
@@ -16,4 +16,4 @@ webpackJsonp([2],{
 
 /***/ })
 
-},[5]);
+},[3]);

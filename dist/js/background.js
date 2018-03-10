@@ -1,26 +1,41 @@
 webpackJsonp([3],{
 
-/***/ 6:
+/***/ 4:
 /***/ (function(module, exports) {
 
-// Referenced: https://github.com/google/page-timer for the FormatDuration
+// FormatDuration adapted from: https://github.com/google/page-timer
+// Help for new day timing from: https://stackoverflow.com/questions/35908846/how-to-detect-app-launched-first-time-in-a-day
 let state = {
     currentTime: 0
 };
+var firstTime = new Date().setHours(0, 0, 0, 0);
+if (window.localStorage.getItem('firstLaunch') == null) {
+    alert("At first time");
+    window.localStorage.setItem('firstLaunch', firstTime.toString());
+}
+else {
+    alert("secondTime " + secondTime);
+    // only use storage if this is the second time on the chrome
+    state.currentTime = parseInt(localStorage.getItem("currentTimeNum"));
+    var storedTime = parseInt(window.localStorage.getItem('firstLaunch'));
+    var secondTime = new Date().setHours(0, 0, 0, 0);
+    if (secondTime > storedTime) {
+        // alert("First time in the day");
+        window.localStorage.setItem('firstLaunch', secondTime.toString());
+    }
+}
+// Current Time
 localStorage.setItem("currentTimeNum", state.currentTime.toString());
 localStorage.setItem("currentTime", FormatDuration(state.currentTime));
 window.setInterval(function () {
     chrome.tabs.getSelected(null, function (tab) {
         var tablink = tab.url;
         state.currentTime = parseInt(localStorage.getItem("currentTimeNum"));
-        if (tablink.includes("facebook")) {
+        // make sure the .com works
+        if (tablink.includes("facebook.com")) {
             state.currentTime += 1000;
-            // chrome.browserAction.setBadgeText({ text: '' + FormatDuration(state.currentTime) });
-            // localStorage.setItem("currentTimeNum", state.currentTime.toString());
         }
-        // else {
-        //     chrome.browserAction.setBadgeText({ text: '' + FormatDuration(state.currentTime) });
-        // }
+        // Current Time
         chrome.browserAction.setBadgeText({ text: '' + FormatDuration(state.currentTime) });
         localStorage.setItem("currentTimeNum", state.currentTime.toString());
         localStorage.setItem("currentTime", FormatDuration(state.currentTime));
@@ -43,4 +58,4 @@ function FormatDuration(d) {
 
 /***/ })
 
-},[6]);
+},[4]);

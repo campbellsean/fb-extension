@@ -2,19 +2,17 @@ import * as moment from 'moment';
 import * as $ from 'jquery';
 
 
-$(function() {
+$(function () {
   const queryInfo = {
     active: true,
     currentWindow: true
   };
 
-  chrome.tabs.query(queryInfo, function(tabs) {
-    $('#timetoday').text(moment().format('YYYY-MM-DD HH:mm:ss'));
+  chrome.tabs.query(queryInfo, function (tabs) {
     $("#timespent").text(chrome.extension.getBackgroundPage().localStorage.getItem("currentTime"));
   });
 
-  $('#reset').click(()=>{
+  $('#reset').click(() => {
     chrome.extension.getBackgroundPage().localStorage.setItem("currentTimeNum", "0");
   });
-
 });

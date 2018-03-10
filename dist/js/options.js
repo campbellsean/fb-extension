@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 4:
+/***/ 2:
 /***/ (function(module, exports) {
 
 // import * as moment from 'moment';
@@ -39,4 +39,4 @@ webpackJsonp([1],{
 
 /***/ })
 
-},[4]);
+},[2]);
