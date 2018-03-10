@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+
+  "name": "Facebook Customization Tool",
+  "description": "Understand your browsing history and reduce the amount of time spent on Facebook.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+      {
+        "matches": ["*://*.facebook.com/*"],
+        "js": ["js/facebook.js"],
+        "css": ["style.css"],
+        "run_at": "document_start"
+      },
+      {
+        "matches": ["*://*.facebook.com/*"],
+        "js": ["js/facebook.js"],
+        "css": ["style.css"],
+        "run_at": "document_idle"
+      },
+      {
+        "matches": ["*://*.facebook.com/*"],
+        "js": ["js/facebook.js"],
+        "css": ["style.css"],
+        "run_at": "document_end"
+      }
+  ],
+
+  "background": {
+    "scripts": ["js/vendor.js", "js/background.js"]
+  },
+
+  "permissions": [
+    "storage",
+    "<all_urls>"
+  ]
+}
