@@ -1,10 +1,25 @@
-# Facebook Chrome Extension
+# "Facebook Limiter" Extension
+By: Sean Campbell
 
-Bootstrapped form [this repo](https://github.com/chibat/chrome-extension-typescript-starter)
+### Purpose
+This chrome extension is aimed at limiting Facebook usage and was inspired by this [extension](https://chrome.google.com/webstore/detail/news-feed-eradicator-for/fjcldmjmjhkklehbacihaiopjklihlgg?hl=en). It does this by **eliminating** the newsfeed and displaying the amount of **time** you have been on Facebook for the day. I personally find Facebook to be a distraction in my life, but I find that I need it for the groups I am apart of. This extension may help a user realize their Facebook habits.
 
-1) the goal is to track history on facebook and eradicate the newsfeed
+### Instructions
+1. Start by downloading the zip file or cloning this repo
+2. `npm insall`
+3. `npm run build`
+4. Go to *chrome://extensions*
+5. Make sure that developer mode checkbox is checked
+6. Load unpacked extension and navigate to the directory and select it
+7. Enjoy!
 
-When this Google Chrome extension is installed and enabled the Facebook newsfeed does not show. The user will also be able to look at the extension popup and learn about their Facebook usage statistics.
+Notice: 
+- time only goes up when you are on the Facebook tab.
+- time resets automatically each day.
 
-Bootstrapped form [this repo](https://github.com/chibat/chrome-extension-typescript-starter)
-Inspired by []
+### References
+Bootstrapped from [this repo](https://github.com/chibat/chrome-extension-typescript-starter)
+
+FormatDuration [from this repo](https://github.com/google/page-timer)
+
+New day timing [stackoverflow](https://stackoverflow.com/questions/35908846/how-to-detect-app-launched-first-time-in-a-day)

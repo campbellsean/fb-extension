@@ -10,17 +10,16 @@ let state = {
 };
 var firstTime = new Date().setHours(0, 0, 0, 0);
 if (window.localStorage.getItem('firstLaunch') == null) {
-    alert("At first time");
+    // alert("At first time");
     window.localStorage.setItem('firstLaunch', firstTime.toString());
 }
 else {
-    alert("secondTime " + secondTime);
+    // alert("secondTime "+secondTime);
     // only use storage if this is the second time on the chrome
     state.currentTime = parseInt(localStorage.getItem("currentTimeNum"));
     var storedTime = parseInt(window.localStorage.getItem('firstLaunch'));
     var secondTime = new Date().setHours(0, 0, 0, 0);
     if (secondTime > storedTime) {
-        // alert("First time in the day");
         window.localStorage.setItem('firstLaunch', secondTime.toString());
     }
 }
