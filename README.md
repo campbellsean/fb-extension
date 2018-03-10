@@ -6,12 +6,14 @@ This chrome extension is aimed at limiting Facebook usage and was inspired by th
 
 ### Instructions
 1. Start by downloading the zip file or cloning this repo
-2. `npm insall`
-3. `npm run build`
-4. Go to *chrome://extensions*
-5. Make sure that developer mode checkbox is checked
-6. Load the *dist* directory
-7. Enjoy!
+2. Go to *chrome://extensions*
+3. Make sure that developer mode checkbox is checked
+4. Load the *dist* directory
+5. Enjoy!
+
+If you would like to develop further:
+`npm insall`
+`npm run build`
 
 Notice: 
 - *src* contains the Typescript files
