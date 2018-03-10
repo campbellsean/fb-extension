@@ -10,10 +10,11 @@ This chrome extension is aimed at limiting Facebook usage and was inspired by th
 3. `npm run build`
 4. Go to *chrome://extensions*
 5. Make sure that developer mode checkbox is checked
-6. Load unpacked extension and navigate to the directory and select it
+6. Load the *dist* directory
 7. Enjoy!
 
 Notice: 
+- *src* contains the Typescript files
 - time only goes up when you are on the Facebook tab.
 - time resets automatically each day.
 
